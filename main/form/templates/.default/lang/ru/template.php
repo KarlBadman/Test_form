@@ -1,0 +1,2 @@
+<?php
+$MESS['MAIN_COMPONENT_FORM_TEMPLATE_SUBMIT'] = 'Отправить';

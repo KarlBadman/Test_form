@@ -104,6 +104,9 @@ class MainFormComponent extends \CBitrixComponent implements Controllerable
                 'ACTIVE' => 'Y',
             ],
             'order' => ['SORT' => 'ASC'],
+            'cache' => [
+                'ttl' => $this->arParams['CACHE_TIME'],
+            ],
         ])->fetchAll();
 
         $arItems = [];
@@ -150,7 +153,10 @@ class MainFormComponent extends \CBitrixComponent implements Controllerable
                     'USER_TYPE',
                     'MULTIPLE',
                     'IS_REQUIRED',
-                    ]
+                    ],
+                'cache' => [
+                    'ttl' => $this->arParams['CACHE_TIME'],
+                ],
             ])->fetchAll();
 
         if(is_array($propertyCodes)){
